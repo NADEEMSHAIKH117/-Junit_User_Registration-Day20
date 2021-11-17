@@ -12,13 +12,25 @@ public class JunitUserRegistrationTest {
 
     @Test
     public void givenFirstName_IsProper_ReturnTrue() {
-        boolean actualResult = junitUserRegistration.firstName("Ramakrishna");
+        boolean actualResult = junitUserRegistration.firstName("Nadeem");
         assertEquals(true, actualResult);
     }
 
     @Test
     public void givenFirstName_IsProper_ReturnFalse() {
-        boolean actualResult = junitUserRegistration.firstName("RamaKrishna");
+        boolean actualResult = junitUserRegistration.firstName("NadeemS");
+        assertEquals(false, actualResult);
+    }
+
+    @Test
+    public void givenLastName_IsProper_ReturnTrue() {
+        boolean actualResult = junitUserRegistration.lastName("Shaikh");
+        assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenLastName_IsNotProper_ReturnFalse() {
+        boolean actualResult = junitUserRegistration.lastName("ShaiKH");
         assertEquals(false, actualResult);
     }
 }
