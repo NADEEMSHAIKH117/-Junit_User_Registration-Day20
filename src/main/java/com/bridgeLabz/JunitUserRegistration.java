@@ -60,5 +60,4 @@ public class JunitUserRegistration {
         return matcher.matches();
     }
     
-
 }
