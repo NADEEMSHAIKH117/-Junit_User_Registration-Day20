@@ -32,6 +32,12 @@ public class JunitUserRegistration {
         return matcher.matches();
     }
     
+    public boolean passwordRule1(String password) {
+        regex = "^[a-z]{8,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+        return matcher.matches();
+    }
     
 
 }
