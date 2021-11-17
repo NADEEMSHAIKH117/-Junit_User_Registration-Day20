@@ -45,4 +45,16 @@ public class JunitUserRegistrationTest {
         boolean actualResult = junitUserRegistration.emailId("nadeem.shaikh117.@gmail.com");
         assertEquals(false, actualResult);
     }
+    
+    @Test
+    public void givenMobileNumber_IsProper_ReturnTrue() {
+        boolean actualResult = junitUserRegistration.mobileNumber("91 9989774456");
+        assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenMobileNumber_IsNotProper_ReturnFalse() {
+        boolean actualResult = junitUserRegistration.mobileNumber("919989774456");
+        assertEquals(false, actualResult);
+    }
 }
