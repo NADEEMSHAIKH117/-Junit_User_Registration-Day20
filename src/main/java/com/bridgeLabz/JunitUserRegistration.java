@@ -53,5 +53,12 @@ public class JunitUserRegistration {
         return matcher.matches();
     }
     
+    public boolean passwordRule4(String password) {
+        regex = "^[a-z](?=.*[A-Z]+)(?=.*[0-9]+).{8,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+        return matcher.matches();
+    }
+    
 
 }
